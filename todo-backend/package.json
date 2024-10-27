@@ -1,0 +1,20 @@
+{
+  "name": "todo-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.21.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1"
+  },
+  "scripts": {
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && concurrently \"npm run backend\" \"npm run client\"",
+    "backend": "cd ../todo-backend && nodemon server.js",
+    "client": "react-scripts start"
+  },
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "concurrently": "^6.2.1"
+  }
+}
